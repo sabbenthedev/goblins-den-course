@@ -13,32 +13,30 @@ sky_material = SubResource("ProceduralSkyMaterial_4rhad")
 [sub_resource type="Environment" id="Environment_sl2e5"]
 background_mode = 2
 sky = SubResource("Sky_dphjl")
-tonemap_mode = 2
 
-[sub_resource type="BoxMesh" id="BoxMesh_4rhad"]
+[sub_resource type="BoxMesh" id="BoxMesh_bhunq"]
 size = Vector3(10, 1, 10)
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_dphjl"]
 data = PackedVector3Array(-5, 0.5, 5, 5, 0.5, 5, -5, -0.5, 5, 5, 0.5, 5, 5, -0.5, 5, -5, -0.5, 5, 5, 0.5, -5, -5, 0.5, -5, 5, -0.5, -5, -5, 0.5, -5, -5, -0.5, -5, 5, -0.5, -5, 5, 0.5, 5, 5, 0.5, -5, 5, -0.5, 5, 5, 0.5, -5, 5, -0.5, -5, 5, -0.5, 5, -5, 0.5, -5, -5, 0.5, 5, -5, -0.5, -5, -5, 0.5, 5, -5, -0.5, 5, -5, -0.5, -5, 5, 0.5, 5, -5, 0.5, 5, 5, 0.5, -5, -5, 0.5, 5, -5, 0.5, -5, 5, 0.5, -5, -5, -0.5, 5, 5, -0.5, 5, -5, -0.5, -5, 5, -0.5, 5, 5, -0.5, -5, -5, -0.5, -5)
 
-[node name="World" type="Node3D" unique_id=906285710]
+[node name="World" type="Node3D" unique_id=1338548768]
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=915396933]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1365513645]
 environment = SubResource("Environment_sl2e5")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1219091590]
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1398821565]
 transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
 shadow_enabled = true
 
-[node name="Ground" type="MeshInstance3D" parent="." unique_id=795355744]
-mesh = SubResource("BoxMesh_4rhad")
+[node name="Ground" type="MeshInstance3D" parent="." unique_id=103778272]
+mesh = SubResource("BoxMesh_bhunq")
 
-[node name="Player" parent="." unique_id=1329737805 instance=ExtResource("1_dphjl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+[node name="Player" parent="." unique_id=1107780970 instance=ExtResource("1_dphjl")]
 
-[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=533869899]
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=351472620]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=385993414]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=291731087]
 shape = SubResource("ConcavePolygonShape3D_dphjl")
 
-[node name="UI" parent="." unique_id=123153430 instance=ExtResource("2_sl2e5")]
+[node name="UI" parent="." unique_id=961782845 instance=ExtResource("2_sl2e5")]
